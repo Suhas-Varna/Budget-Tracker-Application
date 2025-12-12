@@ -9,12 +9,6 @@ Java-based Budget Tracking application using Swing, JDBC, and SQLite to help use
    <li><a href="#why"> Why Budget Tracker? </a></li>
   </ul>
   <li> <a href = "#getting_started"> Getting Started </a></li>
-  <ul>
-   <li><a href="#prerequisites"> Prerequisites </a></li> 
-   <li><a href="#installation"> Installation </a></li> 
-   <li><a href="#backend_setup"> Backend Setup </a></li>
-   <li><a href="#frontend_setup"> Building the App </a></li>
-  </ul>
   <li> <a href = "#tech_used"> TechStack Used </a></li>
   <li> <a href = "#architecture"> System Architecture </a></li>
   <li> <a href = "#conclusion"> Conclusion </a></li>
