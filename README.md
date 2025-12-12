@@ -17,7 +17,6 @@ Java-based Budget Tracking application using Swing, JDBC, and SQLite to help use
   </ul>
   <li> <a href = "#tech_used"> TechStack Used </a></li>
   <li> <a href = "#architecture"> System Architecture </a></li>
-  <li> <a href = "#screenshots"> Screenshots and App Demonstration </a></li>
   <li> <a href = "#conclusion"> Conclusion </a></li>
   <li> <a href = "#team"> Developed By </a></li>
 </ul>
@@ -247,27 +246,6 @@ USER INPUT (Add Expense / Edit / Delete)
 </pre>
 
 
-  <h3>🗂️ Project Structure:</h3>
-
-<pre>
-Budget-Tracker/
-│
-├── lib/
-│   ├── main.dart                # App entry point
-│   ├── models/                  # Expense & category models
-│   ├── pages/                   # Home, Add Expense, Analytics
-│   ├── db/
-│   │   ├── app_db.dart          # SQLite database setup
-│   │   └── dao/                 # Query handlers (CRUD)
-│   ├── services/                # Business logic
-│   └── widgets/                 # Reusable UI components
-│
-├── assets/                      # Images, icons, fonts
-├── pubspec.yaml                 # Dependencies
-└── README.md                    # Documentation
-</pre>
-
-
   <h3>🔐 Security & Data Handling</h3>
 
 <ul>
@@ -347,36 +325,6 @@ Budget-Tracker/
     <img src="https://img.shields.io/badge/GitHub-black?style=flat&logo=github" alt="GitHub" style="max-width: 100%;">
   </a>
   <a href="https://www.linkedin.com/in/suhas-varna2003/" style="text-decoration: none;" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" alt="LinkedIn" />
-  </a>
-</p>
-
-<h3> Seeripi Ganesh Kumar  </h3>
-<p align="left">
-  <a href="" style="text-decoration: none;" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-black?style=flat&logo=github" alt="GitHub" />
-  </a>
-  <a href="" style="text-decoration: none;" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" alt="LinkedIn" />
-  </a>
-</p>
-
-<h3> Vikas D H </h3>
-<p align="left">
-  <a href="" style="text-decoration: none;" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-black?style=flat&logo=github" alt="GitHub" />
-  </a>
-  <a href="" style="text-decoration: none;" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" alt="LinkedIn" />
-  </a>
-</p>
-
-<h3> Sanjay J </h3>
-<p align="left">
-  <a href="" style="text-decoration: none;" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-black?style=flat&logo=github" alt="GitHub" />
-  </a>
-  <a href="" style="text-decoration: none;" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" alt="LinkedIn" />
   </a>
 </p>
