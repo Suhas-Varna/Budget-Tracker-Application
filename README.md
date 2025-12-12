@@ -318,7 +318,6 @@ USER INPUT (Add Expense / Edit / Delete)
 
 
 <section id = "team">
-  <h2> The Team </h2>
   <h3> Suhas Varna </h3>
 <p align="left">
   <a href="https://github.com/Suhas-Varna" style="text-decoration: none;" target="_blank" rel="nofollow">
