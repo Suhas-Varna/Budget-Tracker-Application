@@ -165,14 +165,13 @@ cd Budget-Tracker-Application
   <h2> TechStack - Built With
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" height="20" style="vertical-align: middle;"/>
     <img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png" alt="JDBC" height="20" style="vertical-align: middle;"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" height="20" style="vertical-align: middle;"/>
     <img src="https://maven.apache.org/images/maven-logo-black-on-white.png" alt="Maven" height="20" style="vertical-align: middle;"/>
     <img src="https://cdn-icons-png.flaticon.com/512/702/702814.png" alt="CLI" height="20" style="vertical-align: middle;"/>
   </h2>
 
   <p><strong>Java</strong><br>Core language for building the app’s logic.</p>
    <p><strong>JDBC</strong><br>Manages database connectivity and queries.</p>
-   <p><strong>MySQL</strong><br>Stores user data and transaction records.</p>
+   <p><strong>SQLite</strong><br>Stores user data and transaction records.</p>
     <p><strong>Maven</strong><br>Build automation and dependency management.</p>
     <p><strong>Command-Line UI</strong><br>Lightweight and fast user interface.</p>
 </section>
@@ -196,12 +195,6 @@ cd Budget-Tracker-Application
 │   │ • Add/Update   │   │ • Create/Edit/Delete │           │
 │   │ • Delete       │   │ • Icons/Colors       │           │
 │   └────────────────┘   └──────────────────────┘           │
-│                     ↓                                     │
-│           ┌───────────────────────────┐                   │
-│           │ Budget & Analytics Module │                   │
-│           │ • Monthly budget tracking │                   │
-│           │ • Pie/Bar chart analysis  │                   │
-│           └───────────────────────────┘                   │
 │                     ↓                                     │
 │           ┌───────────────────────────┐                   │
 │           │ Local Database (SQLite)   │                   │
@@ -288,24 +281,6 @@ USER INPUT (Add Expense / Edit / Delete)
 </section>
 
 
-<!-- <section id="screenshots">
-  <h2 id="screenshots">App Demonstration</h2>
-  <button> <a href="https://drive.google.com/file/d/1n1-7fQX8kG-AyN3iRzpJ3jv9V25sCGOn/view?usp=sharing" target="_blank">Clear here to watch</button></a>  
-  <h2> Screenshots </h2>   
-  <img src="https://github.com/user-attachments/assets/d6bd2d65-d428-42fb-85ec-74c09cb683cf" style="width: 200px;" />
-  <img src="https://github.com/user-attachments/assets/8e57886b-b97d-4e0f-a5b2-5b706a504648" style="width: 200px;" />
-  <img src="https://github.com/user-attachments/assets/4cc12fba-0970-4075-8817-d9f5fc1175b7" style="width: 200px;" />
-  <img src="https://github.com/user-attachments/assets/12ef30fb-c8ef-4002-8895-a6eb8a92c82f" style="width: 200px;" />
-  <img src="https://github.com/user-attachments/assets/a5a7a83d-a530-4dac-9f4e-15809d40e187" style="width: 200px;" />
-  <img src="https://github.com/user-attachments/assets/69b02efd-b210-4333-83a1-d4d3573adf2c" style="width: 200px;" />
-  <img src="https://github.com/user-attachments/assets/c779e588-933b-418c-b02c-43b988e50107" style="width: 200px;" />
-  <img src="https://github.com/user-attachments/assets/92a35f92-bd16-4df0-871a-c51502b645d7" style="width: 200px;" />
-  <img src="https://github.com/user-attachments/assets/140f5198-8a1d-4201-9961-c4885a6aa90d" style="width: 200px;" />
-  <img src="https://github.com/user-attachments/assets/8b9f325c-ff8b-4510-ae0b-c485cac584eb" style="width: 200px;" />
-  <img src="https://github.com/user-attachments/assets/af308e05-06b2-4ca0-8291-d7338f82a54f" style="width: 200px;" />
-  <img src="https://github.com/user-attachments/assets/cfe636ad-b298-44c7-bf60-4c681b1a532b" style="width: 200px;" />
-  <img src="https://github.com/user-attachments/assets/f9c92b41-cf4b-4343-a97b-80551fbb6997" style="width: 200px;" />
-</section> -->
 
 
 <section id="conclusion">
