@@ -162,277 +162,155 @@ cd Budget-Tracker-Application
 </section>
 
 
-
-<section id = "tech_used">
-  <h2> TechStack - Built with
-    <img src="https://cdn.icon-icons.com/icons2/2530/PNG/512/flutter_button_icon_151957.png" alt="Flutter" height="20" style="vertical-align: middle; filter: none;"/>
-   
-  <img src="https://cdn.icon-icons.com/icons2/2530/PNG/512/dart_colour_button_icon_151934.png" alt="Dart" height="20" style="vertical-align: middle; filter: none;"/>
-  <img src="https://github.com/user-attachments/assets/b4b3e453-bee1-402c-afd2-c02b137704a6" alt="Firebase" height="20" style="vertical-align: middle; filter: none;"/>
- 
-
+<section id="tech_used">
+  <h2> TechStack - Built With
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" height="20" style="vertical-align: middle;"/>
+    <img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png" alt="JDBC" height="20" style="vertical-align: middle;"/>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" height="20" style="vertical-align: middle;"/>
+    <img src="https://maven.apache.org/images/maven-logo-black-on-white.png" alt="Maven" height="20" style="vertical-align: middle;"/>
+    <img src="https://cdn-icons-png.flaticon.com/512/702/702814.png" alt="CLI" height="20" style="vertical-align: middle;"/>
   </h2>
- 
-  Flutter: Flutter is Google's UI toolkit for building natively compiled apps for various platforms.
 
-  Dart: Dart is a fast, modern programming language primarily used in Flutter development.
-  
-  FastAPI: A modern, high-performance Python web framework for building APIs quickly using async support and automatic documentation.
-
+  <p><strong>Java</strong><br>Core language for building the app’s logic.</p>
+   <p><strong>JDBC</strong><br>Manages database connectivity and queries.</p>
+   <p><strong>MySQL</strong><br>Stores user data and transaction records.</p>
+    <p><strong>Maven</strong><br>Build automation and dependency management.</p>
+    <p><strong>Command-Line UI</strong><br>Lightweight and fast user interface.</p>
 </section>
-  
-<section id = "architecture">
-  <h2> System Architecture </h2>
-  
-<h3>🏗️ High-Level Architecture:</h3>
+
+
+<section id="architecture">
+  <h2>🧩 System Architecture</h2>
+
+  <h3>🏗️ High-Level Architecture:</h3>
 
 <pre>
-┌───────────────────────────────────────────────────────────────────────┐
-│                            Budget Tracker LENS APP                              │
-│   ┌──────────────┐  ┌───────────────┐  ┌──────────────────────────┐   │
-│   │  Home Screen │→ │  Voice Input  │→ │  Intent Classification   │   │
-│   └──────────────┘  └───────────────┘  └──────────────────────────┘   │
-│                 ↓                 ↓                 ↓                 │
-│       ┌────────────────┐  ┌─────────────────┐  ┌──────────────────┐   │
-│       │ Scene Module   │  │  OCR Module     │  │ Navigation Module│   │
-│       │ (YOLOv5-Nano)  │  │ (Google ML Kit) │  │ (Google Maps API)│   │
-│       └────────────────┘  └─────────────────┘  └──────────────────┘   │
-│                                   ↓                                   │
-│                        ┌────────────────────────┐                     │
-│                        │ Emergency SOS Module   │                     │
-│                        │ • One-tap Call/Share   │                     │
-│                        │ • Live Location        │                     │
-│                        └────────────────────────┘                     │
-│                                   ↓                                   │
-│                         ┌───────────────────────┐                     │
-│                         │   HTTP Client (DIO)   │                     │
-│                         └───────────────────────┘                     │
-└───────────────────────────────│───────────────────────────────────────┘
-                                │
-                       ═════════╪══════════
-                        API CALLS │ JSON RESPONSE
-                       ═════════╪══════════
-                                │
-┌───────────────────────────────▼──────────────────────────────────────┐
-│                           FASTAPI BACKEND                            │
-│   ┌────────────────────────────────────────────────────────────────┐ │
-│   │            Intent Processing & Routing Engine                  │ │
-│   │  • Receives speech text                                        │ │
-│   │  • Groq-based intent classifier (Scene / OCR / Navigate / SOS) │ │
-│   │  • Sends response back to app                                  │ │
-│   └────────────────────────────────────────────────────────────────┘ │
-│                                │                                     │
-│     ┌──────────────────────┐   │   ┌──────────────────────────────┐  │
-│     │ /predict-intent      │───┘   │ /vision-processing           │  │
-│     └──────────────────────┘       └──────────────────────────────┘  │
-└───────────────────────────────│──────────────────────────────────────┘
-                                │
-                       ═════════╪══════════
-                        API CALLS │ AI RESPONSES
-                       ═════════╪══════════
-                                │
-┌───────────────────────────────▼──────────────────────────────────────┐
-│                           GROQ AI PLATFORM                           │
-│    ┌──────────────────────────────┐  ┌────────────────────────────┐  │
-│    │ Whisper-v3-turbo             │  │ Llama 3.1 / 3.3 Models     │  │
-│    │ • Speech-to-Text             │  │ • Intent Classification    │  │
-│    │ • Multi-language             │  │ • Dialogue Understanding   │  │
-│    │ • High Accuracy              │  │ • Fast Inference           │  │
-│    └──────────────────────────────┘  └────────────────────────────┘  │
-└──────────────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────┐
+│                     BUDGET TRACKER APP                    │
+│                                                           │
+│   ┌──────────────┐   ┌────────────────────┐               │
+│   │  Home Screen │ → │  Add Expense Form  │               │
+│   └──────────────┘   └────────────────────┘               │
+│             ↓                     ↓                       │
+│   ┌────────────────┐   ┌──────────────────────┐           │
+│   │ Expense Module │   │ Category Management  │           │
+│   │ • Add/Update   │   │ • Create/Edit/Delete │           │
+│   │ • Delete       │   │ • Icons/Colors       │           │
+│   └────────────────┘   └──────────────────────┘           │
+│                     ↓                                     │
+│           ┌───────────────────────────┐                   │
+│           │ Budget & Analytics Module │                   │
+│           │ • Monthly budget tracking │                   │
+│           │ • Pie/Bar chart analysis  │                   │
+│           └───────────────────────────┘                   │
+│                     ↓                                     │
+│           ┌───────────────────────────┐                   │
+│           │ Local Database (SQLite)   │                   │
+│           │ • Expense Records         │                   │
+│           │ • Category Records        │                   │
+│           └───────────────────────────┘                   │
+└───────────────────────────────────────────────────────────┘
 </pre>
 
-<h3>📊 Data Flow Diagram:</h3>
+  <h3>📊 Data Flow Diagram:</h3>
 
 <pre>
-  USER GIVES VOICE COMMAND
-        │
-        ▼
+USER INPUT (Add Expense / Edit / Delete)
+            │
+            ▼
+┌─────────────────────────────────────┐
+│          UI Layer                   │
+│ • Form Validation                   │
+│ • Input Formatting                  │
+└───────────────────────┬─────────────┘
+                        │
+                        ▼
 ┌────────────────────────────────────┐
-│        Flutter App (Budget Tracker Lens)     │
-│  • Mic long-press listener         │
-│  • Speech capture                  │
-│  • Pre-processing                  │
-└───────────────────┬────────────────┘
-                    │  HTTP POST (JSON: transcript)
-                    ▼
-┌────────────────────────────────────┐
-│            FastAPI Backend         │
-│  • Receive text command            │
-│  • Clean & normalize input         │
-└───────────────────┬────────────────┘
-                    │
-                    ▼
-┌────────────────────────────────────┐
-│     Intent Classifier (Groq AI)    │
-│  • Identify intent:                │
-│    scene / object / OCR /          │
-│    navigation / SOS                │
-└───────────────────┬────────────────┘
-                    │
-                    ▼
-┌────────────────────────────────────────────┐
-│         Route to Appropriate Module        │
-│  • Scene → YOLOv5-Nano (image description) │
-│  • Object Detection → YOLOv5-Nano          │
-│  • OCR → Google ML Kit (text reading)      │
-│  • Navigation → Google Maps API            │
-│  • SOS → Call / Share location             │
-└───────────────────┬────────────────────────┘
-                    │
-                    ▼
-┌────────────────────────────────────┐
-│         Module Processing          │
-│  • ESP32 Camera image capture      │
-│  • Vision / OCR inference          │
-│  • Walking route computation       │
-│  • Emergency operations            │
-└───────────────────┬────────────────┘
-                    │
-                    ▼
-┌────────────────────────────────────┐
-│           JSON Response            │
-│  • Objects detected                │
-│  • Scene summary                   │
-│  • Extracted text                  │
-│  • Navigation instructions         │
-│  • SOS confirmation                │
-└───────────────────┬────────────────┘
-                    │  HTTP JSON Response
-                    ▼
-┌────────────────────────────────────┐
-│      Flutter App (Front-End)       │
-│  • Parse JSON                      │
-│  • Convert to Text-to-Speech       │
-│  • Show navigation steps           │
-│  • Display detection results       │
-│  • Trigger SOS actions             │
-└────────────────────────────────────┘
-                    │
-                    ▼
-            USER RECEIVES OUTPUT
+│         Service Layer              │
+│ • Handles CRUD operations          │
+│ • Converts data into models        │
+└───────────────────────┬────────────┘
+                        │
+                        ▼
+┌─────────────────────────────────────┐
+│          DAO / Repository           │
+│ • Interacts with SQLite             │
+│ • Executes Queries                  │
+└───────────────────────┬─────────────┘
+                        │
+                        ▼
+┌─────────────────────────────────────┐
+│         SQLite Database             │
+│ • Stores expenses, categories       │
+│ • Ensures persistent local data     │
+└─────────────────────────────────────┘
 </pre>
 
-<h3>🔄 API Key Rotation Workflow:</h3>
-<pre>
-INITIAL STATE
-┌─────────────────────┐
-│ Keys: [K1, K2, K3]  │
-│ Current: K1         │
-│ Index: 0            │
-└──────────┬──────────┘
-           │
-           ▼
-    API REQUEST WITH K1
-           │
-           ├──── SUCCESS ────► Return Result
-           │
-           └──── RATE LIMIT ERROR
-                      │
-                      ▼
-           ┌──────────────────┐
-           │ Log Error        │
-           │ Rotate to K2     │
-           │ Index: 1         │
-           └─────────┬────────┘
-                     │
-                     ▼
-           RETRY WITH K2
-                     │
-                     ├──── SUCCESS ────► Return Result
-                     │
-                     └──── RATE LIMIT ERROR
-                                │
-                                ▼
-                     ┌──────────────────┐
-                     │ Rotate to K3     │
-                     │ Index: 2         │
-                     └─────────┬────────┘
-                               │
-                               ▼
-                     RETRY WITH K3
-                               │
-                               └──── If all keys exhausted
-                                            │
-                                            ▼
-                                   Return 429 Error
-                                   "All keys rate limited"
-</pre>
 
-<h3>🗂️ Project Structure:</h3>
+  <h3>🗂️ Project Structure:</h3>
 
 <pre>
-Budget Tracker/
+Budget-Tracker/
 │
-├── Budget Tracker/                # Flutter Frontend
-│   ├── lib/
-│   │   ├── main.dart          # App entry point
-│   │   ├── pages              # Features Screens
-│   ├── pubspec.yaml           # Flutter dependencies
-│   ├── android/               # Android-specific config
-│   ├── ios/                   # iOS-specific config
-│   └── README.md
-│   ├── server/                 # FastAPI Backend
-│       ├── server.py           # Main application file
-│       ├── requirements.txt    # Python dependencies
+├── lib/
+│   ├── main.dart                # App entry point
+│   ├── models/                  # Expense & category models
+│   ├── pages/                   # Home, Add Expense, Analytics
+│   ├── db/
+│   │   ├── app_db.dart          # SQLite database setup
+│   │   └── dao/                 # Query handlers (CRUD)
+│   ├── services/                # Business logic
+│   └── widgets/                 # Reusable UI components
 │
-├── README.md                  # Main project documentation
-└── LICENSE
+├── assets/                      # Images, icons, fonts
+├── pubspec.yaml                 # Dependencies
+└── README.md                    # Documentation
 </pre>
 
-<h3>🔐 Budget Tracker Security Architecture</h3>
+
+  <h3>🔐 Security & Data Handling</h3>
 
 <ul>
-  <li><strong>API Key Management</strong>:
-    <ul>
-      <li>Secure storage of API keys in .env (never committed to Git)</li>
-      <li>Server-side key rotation for uninterrupted AI processing</li>
-      <li>Keys never exposed to frontend or client devices</li>
-    </ul>
+  <li><strong>Local Storage Only</strong>  
+    • No external API calls  
+    • User expenses remain on the device
   </li>
-  
-  <li><strong>Data Privacy</strong>:
-    <ul>
-      <li>Audio is processed completely in-memory</li>
-      <li>No audio or generated content stored on the server</li>
-      <li>Temporary files auto-deleted after processing</li>
-      <li>Zero user tracking — Budget Tracker does not collect or retain personal data</li>
-    </ul>
+
+  <li><strong>SQLite + DAO Layer</strong>  
+    • Secure and isolated database  
+    • Prevents invalid writes & corrupted data
   </li>
-  
-  <li><strong>API Security</strong>:
-    <ul>
-      <li>Strict CORS policies for trusted domains</li>
-      <li>Request validation, sanitization, and safe error handling</li>
-      <li>Protected backend routes to prevent unauthorized usage</li>
-    </ul>
+
+  <li><strong>Validation & Error Handling</strong>  
+    • Safe input handling  
+    • Avoids crashes and database inconsistencies
   </li>
 </ul>
 
-<h3>⚡ Budget Tracker Performance Optimizations</h3>
+
+  <h3>⚡ Performance Optimizations</h3>
 
 <ul>
-  <li><strong>Backend</strong>:
-    <ul>
-      <li>FastAPI backend with highly optimized async processing</li>
-      <li>Groq LLM inference speeds up to 330 tokens/sec</li>
-      <li>Memory-efficient pipeline for handling long audio files</li>
-      <li>Automatic key rotation prevents API rate-limit slowdowns</li>
-    </ul>
+  <li><strong>Efficient State Management</strong>  
+    • Minimal rebuilds  
+    • Smooth UI transitions
   </li>
-  
-  <li><strong>Frontend</strong>:
-    <ul>
-      <li>Lazy-loaded UI components for faster initial load</li>
-      <li>Optimized PDF generation with cached fonts</li>
-      <li>Compressed and optimized images</li>
-      <li>Smooth and efficient state management for a responsive UI</li>
-    </ul>
+
+  <li><strong>Optimized SQLite Queries</strong>  
+    • Fast reads  
+    • Batch inserts for large expense imports
+  </li>
+
+  <li><strong>Lazy Rendering</strong>  
+    • Loads expenses only when needed  
+    • Improves performance in large lists
   </li>
 </ul>
+
 </section>
 
-<section id="screenshots">
+
+<!-- <section id="screenshots">
   <h2 id="screenshots">App Demonstration</h2>
   <button> <a href="https://drive.google.com/file/d/1n1-7fQX8kG-AyN3iRzpJ3jv9V25sCGOn/view?usp=sharing" target="_blank">Clear here to watch</button></a>  
   <h2> Screenshots </h2>   
@@ -449,13 +327,13 @@ Budget Tracker/
   <img src="https://github.com/user-attachments/assets/af308e05-06b2-4ca0-8291-d7338f82a54f" style="width: 200px;" />
   <img src="https://github.com/user-attachments/assets/cfe636ad-b298-44c7-bf60-4c681b1a532b" style="width: 200px;" />
   <img src="https://github.com/user-attachments/assets/f9c92b41-cf4b-4343-a97b-80551fbb6997" style="width: 200px;" />
-</section>
+</section> -->
 
 
 <section id="conclusion">
   <h2>Conclusion</h2>
   <p>
-   Budget Tracker Lens represents a practical, human-centered assistive technology designed to empower visually impaired individuals with enhanced perception, awareness, and independence. By integrating ESP32-CAM based edge processing with an intelligent mobile application, the system provides essential features such as scene description, object recognition, text reading, and situational navigation without heavy dependence on cloud services. Its modular design, low-cost hardware, and real-time audio feedback make it both accessible and scalable for everyday use. Ultimately, Budget Tracker Lens demonstrates how affordable innovation, thoughtful engineering, and user-centric design can work together to significantly improve the quality of life for people with vision impairments.
+   Budget Tracker provides a simple, efficient, and organized way to manage personal finances by combining intuitive UI, secure local storage, and powerful tracking tools. With features like expense categorization, monthly budgeting, real-time analytics, and a smooth Flutter-powered experience, it empowers users to stay financially aware and make informed decisions. Its lightweight architecture, fast performance, and offline functionality make it a reliable daily companion for anyone aiming to build better financial habits and maintain full control over their expenses.
   </p>
 </section>
 
